@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/main.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="login">
+				<a href="/login" class="btn btn-primary">Log in with Spotify</a>
+			</div>
+			<div class="loggedin">
+				<div class="profile">
+					<div id="myName"></div>
+					<div id="product"></div>
+				</div>
+				<div id="playlist">
+					<div class="title">Playlist</div>
+					<form id="form">
+					<label for="artist">artist search</label>
+					<input placeholder="artist" type="text" id="artist" name="artist"></input><br>
+					<input type="submit" value="Submit">
+					</form>
+					<div id="result"></div>
+				</div>
+				<div id="recommendation">
+					<div class="title">Recommendation</div>
+					<div class="min-max-slider" data-legendnum="2">
+						<label for="min">Minimum price</label>
+						<input
+							id="min"
+							class="min"
+							name="min"
+							type="range"
+							step="1"
+							min="0"
+							max="3000"
+						/>
+						<label for="max">Maximum price</label>
+						<input
+							id="max"
+							class="max"
+							name="max"
+							type="range"
+							step="1"
+							min="0"
+							max="3000"
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="./js/index.js"></script>
+</html>
